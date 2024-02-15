@@ -1,6 +1,29 @@
 {% extends "base.html" %}
-{% block title %}Dashboard{% endblock %}
+{% block title %}Tablero{% endblock %}
 {% block content %}
-  <h1>Dashboard</h1>
-  <p>Welcome to your dashboard.</p>
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              Bienvenido al Tablero
+            </p>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              <p>Estimado profesor, te damos la más cordial bienvenida a tu espacio personalizado.</p>
+              <p>A continuación, encontrarás información sobre tus cursos en el colegio:</p>
+              <ul>
+                <li><strong>Gracias por formar parte de este equipo de educadores</strong> {{ curso.nombre }}</li>
+                <li><strong>Esperamos este espacio te sirva para tus necesidades</strong> {{ curso.horario }}</li>
+                <li><strong>No dudes que tus aaportaciones siempre son bienvenidas</strong> {{ curso.descripcion }}</li>
+                <!-- Agrega más detalles si son necesarios -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
